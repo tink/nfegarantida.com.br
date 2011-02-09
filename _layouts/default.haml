@@ -1,0 +1,38 @@
+!!! Strict
+
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title= "NFe Garantida &mdash; {{page.title}}"
+    %meta{ :content => 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type' }
+    %meta{ :name => 'viewport', :content => 'width=1024' }
+    %meta{ :name => 'author', :content => "tink! it's all about IT"}
+    %meta{ :name => 'description', :content => "recebe, valida, organiza e guarda suas notas fiscais eletrônicas emitidas e recebidas" }
+    %meta{ :name => 'keywords', :content => 'recebe guarda valida nota fiscal notas fiscais eletrônica eletrônicas recebimento validação armazenamento seguro segurança nfe NFe danfe DANFE exporta filtra organiza' }
+    %link{ :href => '/css/global.css', :media => 'screen', :rel => 'stylesheet', :type => 'text/css' }
+  %body
+    #wrapper
+      #header
+        %h2#logo
+          %a(href='/') NFe Garantida
+        %ul#nav
+          {% if page.title == "Início" %}
+          %li
+            %a.button.question(href='/tour/geral.html') Entenda melhor
+          {% endif %}
+          {% unless page.title == "Programa Beta" %}
+          %li
+            %a.button.bang(href='/beta.html') Participe do beta
+          {% endunless %}
+      #content
+        {{ content }}
+      .rule
+      #footer
+        %ul
+          %li
+            NFe Garantida é um produto da
+            %a(href='http://tink.com.br') tink!
+            &mdash; it's all about IT
+          %li
+            %a(href='/privacidade') Política de Privacidade
+          %li.last
+            %a(href='/tos') Termos de Serviço

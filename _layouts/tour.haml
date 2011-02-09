@@ -1,0 +1,25 @@
+---
+layout: default
+---
+.subnav
+  {% for link_page in site.ordered_pages %}
+  %a(class='{% if link_page.title == page.title %} selected {% endif %}' href='{{link_page.url}}') {{link_page.title}}
+  %span.sep .
+  {% endfor %}
+  %a(href='/beta.html') Participe do beta
+%h1 {% unless page.caption == "" or page.caption == null %} {{page.caption}} {% else %} {{ page.title}} {% endunless %}
+%p.headingdesc {{page.description}}
+.rule
+{{ content }}
+.rule
+%ul.bottomnav
+  {% if page.previous_ordered %}
+  %li.first
+    %a.prev(href='{{page.previous_ordered.url}}') Anterior: {{page.previous_ordered.title}}
+  {% endif %}
+  %li.last
+    {% if page.next_ordered %}
+    %a.next(href='{{page.next_ordered.url}}') Próximo: {{page.next_ordered.title}}
+    {% else %}
+    %a.next(href='/beta.html') Participe do beta!
+    {% endif %}

@@ -1,0 +1,24 @@
+---
+layout: default
+title: Início
+---
+{% for post in site.posts.each %}
+  %a(href="{{post.url}}") {{page.title}}
+{% endfor %}
+%p.overview
+  A NFe Garantida recebe, organiza, valida e guarda as notas fiscais de entrada e saída da sua empresa de forma simples e segura. 
+.rule
+%ul.highlights.clearfix
+  %li.highlight-discussions
+    %h2 Sua Nota Fiscal está segura conosco
+    %p Utilizamos os mais altos padrões de segurança para garantir que sua NFe vai estar bem guardada e disponível apenas para você quando você precisar!
+  %li.highlight-email
+    %h2 Fácil como enviar um e-mail
+    %p Todo cliente da NFe Garantida recebe um endereço de e-mail exclusivo para receber suas NFe's emitidas e recebidas imediatamente.
+  %li.highlight-noinstall
+    %h2 Nenhuma instalação necessária
+    %p NFe Garantida é uma aplicação nas nuvens. Você não precisa se preocupar em instalar novos programas no(s) seu(s) computador(es).
+  %li.highlight-knowledgebase
+    %h2 Você pode gerenciar suas NFe's
+    %p Todas as NFe's guardadas podem ser visualizadas e re-enviadas para você, seu cliente, fornecedor ou contador a qualquer momento.
+{% include social.haml %}

@@ -1,0 +1,152 @@
+/* Contains master styles for main layout, typography and page styles */
+
+/*------------------------------------------------------------------------------------
+  @group Global Reset
+------------------------------------------------------------------------------------*/
+* {
+  padding:0;
+  margin:0;
+}
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address { margin:1em 0; }
+li, dd { margin-left:5%; }
+fieldset { padding: .5em; }
+select option{ padding:0 5px; }
+
+.access{ display:none; } /* For accessibility related elements */
+.clear{ clear:both; height:0px; font-size:0px; line-height:0px; overflow:hidden; }
+a{ outline:none; }
+a img{ border:none; }
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display:inline-block;}
+.clearfix {display: block;}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Basic Layout
+------------------------------------------------------------------------------------*/
+
+body{
+  font-family: "Cambria", "Georgia", "Times New Roman", Times, sans-serif;
+  font-size:14px;
+  line-height:1.4;
+  color:#666;
+  background:url(../images/top_bar.gif) 0 0 repeat-x #fff;
+}
+
+#wrapper{
+  margin:0 auto;
+  width:800px;
+}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Type
+------------------------------------------------------------------------------------*/
+
+a{
+  color:#0084bd;
+  text-decoration:none;
+}
+a:visited{
+  color:#0084bd;
+}
+a:hover{
+  color:#6db4d3;
+  text-decoration:underline;
+}
+
+p.overview{
+  font-size:30px;
+  letter-spacing:-0.3px;
+  text-align:center;
+  color:black;
+}
+
+h1{
+  margin:18px 0 0 0;
+  font-size:36px;
+  font-weight:normal;
+  color:#000;
+}
+
+h2{
+  font-size:18px;
+  font-weight:normal;
+  color:#000;
+}
+
+blockquote{
+  width: 45%;
+  margin:20px 0;
+  padding:15px 15px;
+  color:#000;
+  background:#f1f1f1;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+}
+blockquote p{
+  margin:0;
+  padding:0 0 0;
+  font-size:18px;
+  font-style:italic;
+  color:#666;
+}
+blockquote cite{
+  margin:0;
+  display:block;
+  font-weight:bold;
+  font-size:11px;
+  font-style:normal;
+  text-align:right;
+}
+
+p.headingdesc{
+  margin:0 0 28px 0;
+  font-size:16px;
+  font-style:italic;
+}
+
+p.bigger{
+  font-size:16px;
+}
+
+strong.highlight{
+  padding:0;
+  font-weight:normal;
+  color:#000;
+  background:#faffa0;
+}
+
+.rule{
+  margin:20px 0;
+  height:0px;
+  font-size:0px;
+  line-height:0;
+  border-bottom:1px solid #ddd;
+  clear: both;
+}
+
+/* @end */
+
+/* legal */
+.legal { padding:0 0 10px; }
+.legal h2 { font-size:29px; }
+.legal h3 { margin:0 0 3px; padding:12px 0 0; }
+.legal p { margin:0 0 15px; }
+.legal ul li { padding:0 0 8px; }
+
+/* footer */
+#footer ul { list-style:none; margin:0; padding:0; zoom:1; }
+#footer ul:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+#footer li { float:left; display:inline; margin:0 8px 0 0; padding:0 8px 0 0; color:#888; font:12px/16px Helvetica, Arial, sans-serif; border-right:1px solid #d0d0d0; }
+#footer li.last { margin:0; border:0; }

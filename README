@@ -1,0 +1,11 @@
+** Please use RVM in order to make your life easier
+
+make sure you have ruby-1.9.2-head available an then just cd to the project clone dir and watch RVM getting the rest done.
+
+** To run locally
+
+jekyll --server
+
+** To deploy it:
+
+rake deploy
