@@ -7,7 +7,7 @@ task :deploy do
   username = ask("Username:  ") { |q| q.echo = true }
   password = ask("Password:  ") { |q| q.echo = "*" }
 
-  Net::SCP.start('alpha.nfegarantida.com.br', username, :password => password) do |scp|
+  Net::SCP.start('nfegarantida.com.br', username, :password => password) do |scp|
     scp.upload '_site/', '/var/www/', :recursive => true
   end
 end
